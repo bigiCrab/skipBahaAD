@@ -104,26 +104,29 @@
     const appendAnchor = $(
       "#BH_background > div.container-player > div.anime-title > div.anime-option > section.videoname > div.anime_name > button"
     );
-    var changeBTN = $(
-      `<span style="margin-left:5px;cursor: pointer;user-select: none;"><a style="padding:5px 10px;line-height: 1.5em;" class="bluebtn"></a></span>`
-    );
-    $("a.bluebtn", changeBTN).click(() => {
+    var changeBTN = $(`
+      <span style="margin-left:5px;cursor: pointer;user-select: none;">
+      </span>
+      `);
+    $(changeBTN).click(() => {
       handleUserChangeSetting();
     });
     var changeBTNContent_all = $(`
-    <span id="free-guy-ui" title="All AD will be skip (refresh page to work)">
-        <i class="material-icons" style="vertical-align: middle;"> scatter_plot </i>
+    <span id="free-guy-ui" title="All AD will be skip (refresh page to work)" style="padding:5px 10px;line-height: 1.5em;" class="bluebtn">
+     AD All
     </span>
     `);
-        // <i class="material-icons" style="vertical-align: middle;transform: rotate(90deg);"> drag_indicator </i>
-        // <i class="material-icons" style="vertical-align: middle;"> grid_view </i>
+    // <i class="material-icons" style="vertical-align: middle;"> scatter_plot </i>
+    // <i class="material-icons" style="vertical-align: middle;transform: rotate(90deg);"> drag_indicator </i>
+    // <i class="material-icons" style="vertical-align: middle;"> grid_view </i>
     var changeBTNContent_next = $(`
-    <span id="free-guy-ui" title="Only this & next ep AD will be skip (refresh page to work)">
-        <i class="material-icons" style="vertical-align: middle;"> hdr_weak </i>
+    <span id="free-guy-ui" title="Only this & next ep AD will be skip (refresh page to work)" style="padding:5px 10px;line-height: 1.5em;" class="bluebtn">
+     AD Next
     </span>
     `);
+    // <i class="material-icons" style="vertical-align: middle;"> hdr_weak </i>
 
-    $("a.bluebtn", changeBTN).append(changeBTNContent_all);
+    $(changeBTN).append(changeBTNContent_all);
     appendAnchor.after(changeBTN);
     updateUI();
 
