@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        啊我就免費仔
+// @name        動畫瘋_自動在背景播廣告
 // @namespace   Violentmonkey Scripts
 // @match       https://ani.gamer.com.tw/animeVideo.php
 // @grant       none
